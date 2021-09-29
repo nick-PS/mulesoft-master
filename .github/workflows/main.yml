@@ -1,9 +1,13 @@
 name: Java CI with Maven
-on:  
+on: 
+  [workflow_dispatch]
+  
   push:    
     branches: [ main ]  
   pull_request:    
     branches: [ main ]
+    
+    
 # A workflow run is made up of one or more jobs
 
 jobs:
