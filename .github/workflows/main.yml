@@ -50,8 +50,7 @@ run: run: mvn clean package
         run: |
           artifactName1=$(ls target/*.jar | head -1)
           commitHash=$(git rev-parse -short "$GITHUB_SHA")
-          artifactName2=$(ls target/*.jar | head -1 | sed "s/.jar/.$comitHash.jar/g")
-          mv $artifactName1 $artifactName2
+          mv $artifactName1
           
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.3
