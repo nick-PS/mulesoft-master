@@ -30,7 +30,7 @@ jobs:
       - name: Cache
         uses: actions/cache@v2.1.5
         with:
-          path: ~/.m2/repository
+          path: /home/runner/.m2/repository
           key: ${{ runner.os }}-maven-${{ hashFiles(‘**/pom.xml’) }}
           restore-keys: |
             ${{ runner.os }}-maven- 
