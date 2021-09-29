@@ -43,7 +43,7 @@ with:
 uses: actions/setup-java@v1
     with:
     # The Java version to set up. Takes a whole or semver Java version. See examples of supported syntax in README file
-    java-version: 1.8   
+      java-version: 1.8   
 
 - name: build
 run: run: mvn clean package
