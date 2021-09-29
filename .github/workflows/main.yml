@@ -27,22 +27,21 @@ build:
 # Checks-out your repository
 
     - uses: actions/checkout@v2
-
-        
-    – uses: actions/cache@v1        
+    - name: Cache
+      uses: actions/cache@v2.1.5
+      with:
+        path: ~/.m2/repository
+        key: ${{ runner.os }}-maven-${{ hashFiles(‘**/pom.xml’) }}
+        restore-keys: |
+          ${{ runner.os }}-maven- 
+          
+    - name: Setup Java JDK
+    uses: actions/setup-java@v1
     with:
-    path: ~/.m2/repository
-    key: ${{ runner.os }}-maven-${{ hashFiles(‘**/pom.xml’) }}
-    restore-keys: |
-      ${{ runner.os }}-maven- 
-   
-  - name: Setup Java JDK
-  uses: actions/setup-java@v1
-  with:
     # The Java version to set up. Takes a whole or semver Java version. See examples of supported syntax in README file
-    java-version: 1.8   
+      java-version: 1.8   
 
-  - name: build
+    - name: build
   run: run: mvn clean package
       # Runs a set of commands using the runners shell
   - name: Artifact file name with commit hash
