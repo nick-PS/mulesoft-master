@@ -41,7 +41,7 @@ jobs:
         run: mvn clean package
         # Runs a set of commands using the runners shell
 
-deploy-dev:
+deploy-sandbox:
     needs: build
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
