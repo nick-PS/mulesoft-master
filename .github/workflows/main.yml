@@ -42,7 +42,7 @@ jobs:
         run: |
             artifactName=$(ls target/*.jar | head -1)
             commitHash=$(git rev-parse -short "$GITHUB_SHA")
-            mv $artifactName
+            mv $artifactName 
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.3
