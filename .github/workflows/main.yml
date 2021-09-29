@@ -39,10 +39,10 @@ path: ~/.m2/repository
 
 key: ${{ runner.os }}-maven-${{ hashFiles(‘**/pom.xml’) }}
 
-restore-keys:|
+restore-keys: |
 
-  ${{ runner.os }}-maven- 
-  
+${{ runner.os }}-maven- 
+
 - name: build
 run: run: mvn clean package
       # Runs a set of commands using the runners shell
