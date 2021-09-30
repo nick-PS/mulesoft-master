@@ -78,7 +78,6 @@ jobs:
           
         run: |
           artifactName=$(ls *.jar | head -1)
-          mvn clean deploy -Denvironment=Sandbox -Dregion=us-east-2 -Dworkers=1 -DworkerType=MICRO -Denv=dev -Dusername=$USERNAME -Dpassword=96$PASSWORD -DmuleDeploy
-          
+          mvn clean deploy -Denvironment=Sandbox -Dregion=us-east-2 -Dworkers=1 -DworkerType=MICRO -Denv=dev -Dusername=arischermer -Dpassword=Piggie96$! -DmuleDeploy
           
           
