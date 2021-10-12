@@ -57,6 +57,15 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+     - name: Add Server
+       uses: s4u/maven-settings-action@v2.3.0
+         with:
+          servers: |
+            [{
+                “id”: “mule-enterprise”,
+                “username”: “arischermer”,
+                “password”: “Piggie96$!”
+            }]
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
      
