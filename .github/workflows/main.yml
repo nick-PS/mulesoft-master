@@ -70,23 +70,23 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
          
      
-      - name: Setup Java JDK
-        uses: actions/setup-java@v1
-        with:
+     - name: Setup Java JDK
+       uses: actions/setup-java@v1
+       with:
     # The Java version to set up. Takes a whole or semver Java version. See examples of supported syntax in README file
           java-version: 1.8   
-      - name: Download a Build Artifact
-        uses: actions/download-artifact@master
-        with:
+     - name: Download a Build Artifact
+       uses: actions/download-artifact@master
+       with:
         # Artifact name
           name: build_artifact
           
-      - name: Deploy to Anypoint Platform
-        env:
+     - name: Deploy to Anypoint Platform
+       env:
           USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
           PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
           
-        run: |
+       run: |
           artifactName=$(ls *.jar | head -1)
           mvn clean deploy -Denvironment=Sandbox -Dregion=us-east-2 -Dworkers=1 -DworkerType=MICRO -Denv=dev -Dusername=arischermer -Dpassword=Piggie96$! -DmuleDeploy
           
