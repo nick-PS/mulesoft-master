@@ -57,6 +57,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+     - uses: actions/checkout@v2
      - name: Add Server
        uses: s4u/maven-settings-action@v2.3.0
        with:
@@ -67,7 +68,7 @@ jobs:
                 “password”: “Piggie96$!”
             }]
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+         
      
       - name: Setup Java JDK
         uses: actions/setup-java@v1
