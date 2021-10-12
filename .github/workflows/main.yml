@@ -59,7 +59,7 @@ jobs:
     steps:
      - name: Add Server
        uses: s4u/maven-settings-action@v2.3.0
-         with:
+       with:
           servers: |
             [{
                 “id”: “mule-enterprise”,
