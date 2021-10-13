@@ -63,9 +63,9 @@ jobs:
        with:
           servers: |
             [{
-                “id”: “mule-enterprise”,
-                “username”: “arischermer”,
-                “password”: “Piggie96$!”
+                “id”: "mule-enterprise",
+                “username”: "arischermer",
+                “password”: "Piggie96$!"
             }]
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
          
