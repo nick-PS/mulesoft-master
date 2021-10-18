@@ -70,6 +70,4 @@ jobs:
           USERNAME: ${{ secrets.ANYPOINT_USERNAME }}
           PASSWORD: ${{ secrets.ANYPOINT_PASSWORD }}
           
-       run: |
-          artifactName=$(ls *.jar | head -1)
-          mvn deploy -Denvironment=Sandbox -Dregion=us-east-1 -Dworkers=1 -DworkerType=MICRO -Denv=dev -Dusername=arischermer -Dpassword=Piggie96!@ -DmuleDeploy
+       
